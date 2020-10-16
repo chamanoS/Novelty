@@ -1,0 +1,38 @@
+
+<div *ngIf="pageLoaded">
+
+
+    <div class="container d-flex justify-content-center p-3">
+        <h4>Lets help you understand the legals regarding starting up your business</h4>
+    </div>
+    
+      
+    <div class="container d-flex justify-content-center p-3">
+       
+    
+        <mat-card mat-card-actions > 
+            <div  class="d-flex justify-content-center">
+                    {{  questions[index].q_name }}
+            </div>
+        
+            <br>
+    
+            <div class="d-flex justify-content-center" *ngIf="show">
+                <p>{{contentShow.content}} <a href="{{contentShow.link}}" target="_blank"> click here.</a></p> 
+                <br>
+                <br> 
+            </div>
+    
+    
+            <div *ngIf="!done" class="d-flex justify-content-center">
+                <button  mat-flat-button  color="primary" (click)="yesClick()">{{button}}</button><button mat-button (click)="noClick()" *ngIf="button==='Yes'">Learn more</button>
+            </div>
+    
+            <div *ngIf="done"  class="d-flex justify-content-center">
+                <button  mat-flat-button  color="primary">{{button}}</button>
+            </div>
+            
+        </mat-card>
+    </div>
+    
+    </div>

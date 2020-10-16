@@ -1,0 +1,46 @@
+<div>
+   <div *ngIf="!hide">
+      <div class="d-flex justify-content-center mt-3 mb-2">
+         <h5 class="lead text-center ml-3 pt-1">
+           You're almost finish, Okay one more! just the rating <br>
+           How confident are you with your idea.
+
+         </h5>
+      </div>
+
+      <div class="full-width pl-2">
+         <ngb-rating [(rate)]="selected" (hover)="hovered=$event" (leave)="hovered=0" [readonly]="readonly" max="8">
+            <ng-template let-fill="fill" let-index="index">
+               <span class="star" [class.filled]="fill === 100" [class.bad]="index < 3">&#9733;</span>
+            </ng-template>
+         </ngb-rating>
+      </div>
+
+      <div class="QnE5Md f2prfd px-5 ml-3">
+         <span class="qBrLkf">little confident</span>
+         <span class="yZ71kd">Very confident</span>
+      </div>
+      <div class="d-flex justify-content-center mt-2 mb-2">
+         <button mat-flat-button color="primary" (click)="updateRate()">Rate</button>
+      </div>
+      <hr>
+   </div>
+   <div *ngIf="hide">
+      <div class="d-flex justify-content-center">
+         <h5 class="lead text-center mb-3 mt-3">
+            Congratulations
+         </h5>
+      </div>
+      <h5 class="text-center msg mb-3 mt-2">
+         You've evaluated your first business idea, right now it's time take another step into your journey and turn
+         your business idea into a business.
+      </h5>
+      <br>
+
+      <div  class="d-flex justify-content-center mb-5">
+         <button mat-flat-button color="primary" (click)="retakeQuestions()">Retake The Question</button> &nbsp;
+         <button mat-flat-button color="primary" routerLink="/client/legal-journey">Continue Next Step</button>
+     </div>
+
+   </div>
+</div>

@@ -1,0 +1,40 @@
+<div *ngIf="!show" class="question">
+    <h2 class="lead mb-2 h3 text-uppercase">
+        <mat-icon class="text-primary">question_answer</mat-icon>
+        Evaluate your business
+        <span class="text-primary text-uppercase">{{bizName}}</span>
+    </h2>
+
+    <form [formGroup]="formQuestion" >
+      <p>Question <span class="badge badge-primary mb-2">{{index+1}}</span> of <span class="badge badge-primary mb-2">{{questions.length}}</span></p>
+    <div  class="container d-flex">
+            <mat-form-field  class="example-full-width">
+                <textarea matInput placeholder='{{question.q_name}}' formControlName="answer"></textarea>
+            </mat-form-field>
+    </div>
+    </form>
+
+    <div *ngIf="!done" >
+        <button mat-flat-button color="primary" (click)="save()" [disabled]="formQuestion.invalid">Next</button>
+    </div>
+  
+    <div *ngIf="done" >
+        <button mat-flat-button color="primary" (click)="save()" [disabled]="formQuestion.invalid">Continue</button>
+    </div>
+
+</div>
+
+<div *ngIf="show" class="question">
+    <h2 class="lead mb-2 h3 text-uppercase">
+        <mat-icon class="text-primary">question_answer</mat-icon>
+        Evaluate your business
+        <span class="text-primary text-uppercase"> idea</span>
+    </h2>
+    <div *ngIf="show" class="w3-container w3-border w3-round-xlarge mb-2">
+        <div *ngIf="show" class="d-flex justify-content-center">
+            <app-ratings></app-ratings>
+        </div>
+
+    </div>
+
+</div>

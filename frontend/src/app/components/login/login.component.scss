@@ -1,0 +1,64 @@
+@import "~animate.css/animate.min";
+
+.card {
+  width: 750px;
+  height: 600px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 2%;
+}
+.image {
+  height: 350px;
+  width: 170;
+  margin-top: 50px;
+}
+.img {
+  margin-left: 20px;
+}
+.div {
+  margin-left: 95px;
+}
+.material-icons {
+  font-size: 18px !important;
+  padding-right: 15px;
+}
+.header {
+  font-weight: bolder;
+  font-size: xx-large;
+}
+.buttons {
+  display: flex;
+  justify-content: centre;
+  align-items: center;
+  margin-top: 20px;
+}
+#btn {
+  font-size: smaller;
+
+  margin-left: 30px;
+}
+.btn:hover {
+  background-color: #042a43;
+  color: white;
+}
+
+#form {
+  height: 50px;
+}
+.forgot {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+}
+.forgot a {
+  text-decoration: none;
+  font-family: serif;
+  color: grey;
+}
+.forgot a:hover {
+  color: #042a43;
+}
+
+@media screen and (max-width: 414px) {
+  
+}

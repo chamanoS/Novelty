@@ -1,0 +1,34 @@
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="header">
+    <h1 class="display-4 mb-2" joyrideStep="financeStep" title="Finance"
+        text="If you're on this session of the journey it means you've added an idea, evaluated, rated it and went through Legal. Finances, this part of your journey is meant to inform you by giving useful tips when it comes to Finances, how get funding/starting capital, managing your funds when it comes to your business.">
+        <span> Finance</span></h1>
+    <p class="lead">To succeed in your business venture you’ll need to understand the underlying financial
+        flows of your
+        business.</p>
+    <footer class="blockquote-footer">This session focuses on the financial tools you need to help you
+        manage and build your business.
+    </footer>
+</div>
+<div class="img">
+    <img class="image animated fadeInRight delay-0.5s" src="assets/img/everything-3.png">
+</div>
+
+<div class="parent">
+    <div class="headline">
+        <h4>Here is a checklist of the documents you'll need.</h4>
+        <ul>
+            <li *ngFor="let doc of document">{{doc.content}}</li>
+        </ul>
+    </div>
+    <div class="divider">
+        <div class="card" style="width: 18rem;" *ngFor="let cont of financeContent">
+            <div class="card-body">
+                <h5 class="card-title">{{cont.title}}</h5>
+                <p class="card-text">{{cont.content}}</p>
+                <a href="{{cont.link}}" target="_blank" class="card-link">Click here</a>
+            </div>
+        </div>
+    </div>
+
+</div>

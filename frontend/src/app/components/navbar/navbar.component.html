@@ -1,0 +1,61 @@
+
+
+<!-- <mat-toolbar color="primary" class="">
+    <div class="container">
+        <mat-toolbar-row>
+        
+        <img src="../../../assets/img/2L-Logo-svg.svg" width="40"  >
+        <span class="example-spacer"></span>
+        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
+        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
+        </mat-toolbar-row>
+    </div>
+</mat-toolbar>
+
+
+ -->
+
+ 
+ <div style="height: 80vh;">
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>Responsive Navigation</span>
+        <span class="menu-spacer"></span>
+        <div fxShow="true" fxHide.lt-md>
+      
+          <a href="#" mat-button>Menu Item 1</a>
+          <a href="#" mat-button>Menu Item 2</a>
+          <a href="#" mat-button>Menu Item 3</a>
+          <a href="#" mat-button>Menu Item 4</a>
+          <a href="#" mat-button>Menu Item 5</a>
+          <a href="#" mat-button>Menu Item 6</a>
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  
+  <mat-sidenav-container fxFlexFill>
+      <mat-sidenav #sidenav>
+        <mat-nav-list>
+          <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+          <a href="#" mat-list-item>Menu Item 1</a>
+          <a href="#" mat-list-item>Menu Item 2</a>
+          <a href="#" mat-list-item>Menu Item 3</a>
+          <a href="#" mat-list-item>Menu Item 4</a>
+          <a href="#" mat-list-item>Menu Item 5</a>
+          <a href="#"mat-list-item>Menu Item 6</a>
+        </mat-nav-list>
+      </mat-sidenav>
+      <mat-sidenav-content fxFlexFill>Main content</mat-sidenav-content>
+    </mat-sidenav-container>
+
+    
+  </div> 
+  
+
+  <mat-sidenav-container class="example-container" *ngIf="shouldRun">
+    <mat-sidenav mode="side" opened>Sidenav content</mat-sidenav>
+    <mat-sidenav-content>Main content</mat-sidenav-content>
+  </mat-sidenav-container> 

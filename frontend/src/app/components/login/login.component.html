@@ -1,0 +1,54 @@
+<mat-card class="card">
+    <mat-grid-list cols="2" rowHeight="550px">
+      <!-- image -->
+        <mat-grid-tile>
+            <div class="img">
+              <img class="image animated bounceInLeft delay-0.5s" src="assets/img/login.png">
+            </div>
+          </mat-grid-tile>
+
+<!-- form to login -->
+      <mat-grid-tile class="text-inside-grid" id="form">
+        <div class="div animated bounceInRight delay-0.5">
+          <h3 class="header">Login</h3>
+         
+          <form [formGroup]="form" #loginForm="ngForm" (ngSubmit)="submit(loginForm.value)">
+            <!-- input for the email of user  -->
+            <mat-form-field appearance="legacy">
+              <i matPrefix  class="material-icons">
+                email
+                </i>
+              <input type="email" matInput placeholder="Email Address"  required formControlName="email" /> 
+              <mat-error *ngIf="form.controls['email'].invalid"> Not a valid email</mat-error>
+            </mat-form-field>
+
+          <!-- input for confirming password -->
+              <mat-form-field>
+                <i matPrefix  class="material-icons">
+                  lock
+                  </i>
+                <input type="password" matInput placeholder="Enter your password" formControlName="user_password" required>
+                <!-- checks if the password is inserted -->
+                <mat-error *ngIf="form.controls['user_password'].invalid">Password is required</mat-error>
+              </mat-form-field>
+           
+          </form>
+          <div class="forgot">
+            <a routerLink="/client/forgotPassword">Forgot your password</a>
+          </div>
+
+          <!-- buttons -->
+         <div class="buttons">
+           <!-- login button -->
+          <button mat-flat-button color="primary" type="submit" class="btn" (click)="login()" [disabled]="loginForm.invalid" >Login</button>
+          <!-- register button -->
+         <button mat-flat-button color="primary" class="btn" id="btn" routerLink="/client/register">Register</button>
+          
+         </div>
+        </div>
+      </mat-grid-tile>
+
+    
+    </mat-grid-list>
+  </mat-card>
+

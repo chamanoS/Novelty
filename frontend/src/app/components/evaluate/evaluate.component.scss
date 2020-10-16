@@ -1,0 +1,32 @@
+@import "~animate.css/animate.min";
+
+#body{
+    margin: 100px 100px;
+    display:flex;
+    justify-content:center;
+}
+.wrap1{
+    flex:1;
+    // margin-right:10px;
+}
+.wrap2{
+    flex:1;
+    // margin-left:10px;
+    text-align: center;
+}
+.input-group{
+    width:50%;
+    margin:1px 10px 20px 0px ;
+    border-style: none;
+}
+.btn{
+    margin:15px 0px;
+}
+#body h1{
+    margin-bottom:40px;
+}
+.image{
+    width:500px;
+    border-radius: 4px;
+	box-shadow: 0 2.5px 7.5px rgba(0, 0, 0, 0.3);
+}

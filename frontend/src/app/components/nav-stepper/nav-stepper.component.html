@@ -1,0 +1,69 @@
+<div class="container-outer mt--5">
+    <!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear" class="mt-5">
+            {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+        </button> -->
+    <mat-horizontal-stepper [linear]="isLinear" #stepper class="mx-5 px-5" (selectionChange)="selectionChange($event)">
+        <mat-step [stepControl]="firstFormGroup">
+            <form [formGroup]="firstFormGroup">
+                <ng-template matStepLabel>Start your Journey</ng-template>
+                <app-display></app-display>
+                <div>
+                    <button mat-button matStepperNext class="btn">Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup">
+            <form [formGroup]="secondFormGroup">
+                <ng-template matStepLabel>Evaluate</ng-template>
+                <app-journey></app-journey>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext class="btn">Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="thirdFormGroup">
+            <form [formGroup]="thirdFormGroup">
+                <ng-template matStepLabel>Legality</ng-template>
+                <app-legal-journey></app-legal-journey>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext class="btn">Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="fourthFormGroup">
+            <form [formGroup]="fourthFormGroup">
+                <ng-template matStepLabel>Finance</ng-template>
+                <app-finance></app-finance>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext class="btn">Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="fifthFormGroup">
+            <form [formGroup]="fifthFormGroup">
+                <ng-template matStepLabel>Developers</ng-template>
+                <app-profile></app-profile>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext class="btn">Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>Done</ng-template>
+            <h3 class="display-5 text-center justify-content-center">
+                Congratulations, you've launched your first <span class="text-primary">BUSINESS.</span>
+            </h3>
+            <div>
+                <img class="image justify-content-center" src="assets/img/celebrate.png" />
+            </div>
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button routerLink="/bridge" class="btn">Add More Ideas</button>
+            </div>
+        </mat-step>
+    </mat-horizontal-stepper>
+</div>

@@ -1,0 +1,50 @@
+
+ 
+.inside-wrap{
+  margin: 80px 150px ;
+  display: flex;
+  justify-content: space-between;
+
+}
+span{
+  color:blue;
+  font-size: 25px;
+}
+.header{
+  margin-right: 15px;
+}
+.img {
+  margin-left: 15px;
+}
+
+.image {
+  height: 300px;
+  margin-left: 20px;
+}
+
+//styling the card
+.divider{
+  margin: 50px 150px ;
+  display: flex;
+  justify-content: space-between;
+}
+.card{
+  padding: 20px;
+}
+.headline{
+  margin: 10px 150px;
+}
+.route-btn{
+  text-align: center;
+  margin: 20px auto;
+}
+.route-btn button{
+  margin: 15px;
+}
+
+.container-inner {
+  position: relative;
+  width: 80%;
+  height: 50%;
+  margin: auto;
+}

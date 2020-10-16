@@ -1,0 +1,47 @@
+.d-flex {
+    display: -webkit-box!important;
+    display: flex!important;
+}
+
+.badge-rounded-circle.badge-lg {
+    height: calc(1em + 1.4em);
+    padding-left: .7em;
+    padding-right: .7em;
+}
+
+.badge-rounded-circle {
+    height: calc(1em + .5rem);
+    padding-left: .25rem;
+    padding-right: .25rem;
+    border-radius: 10rem;
+}
+
+.badge-lg {
+    padding: .7em 1.15em;
+}
+
+.badge-primary-soft {
+    background-color: rgba(51,94,234,.1);
+    color: #335eea;
+}
+.mt-1, .my-1 {
+    margin-top: .25rem!important;
+}
+
+.badge {
+    display: inline-block;
+    padding: .25rem .75rem;
+    font-size: 75%;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .375rem;
+    -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.ml-5, .mx-5 {
+    margin-left: 1.5rem!important;
+}

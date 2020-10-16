@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+<!-- Include the above in your HEAD tag  -->
+
+<div class="wraper">
+  <div class="header">
+    <div class="devInfo">
+      <!-- Heading -->
+      <h5 class="display-3 text-center text-md-left">
+        Every <span class="text-primary">Business</span> <br />
+        Needs a <span class="text-primary">Website</span>
+      </h5>
+      <h6 class="lead text-center text-md-left text-muted mb-6 mb-lg-8">
+        A website is a great way to provide value added service to your
+        customers and clients.
+      </h6>
+
+      <p class="lead text-center text-md-left text-muted mb-6 mb-lg-8">
+        It is a great way to keep them coming back to your website anytime when
+        they need your products or services.
+        <br />
+        Have the best web developers who can make the best sites and help you to
+        expand your business from all the clients.
+      </p>
+    </div>
+
+    <h5 class="h5">Check Domain Availability</h5>
+
+    <form [formGroup]="form">
+      <div class="box">
+        <div class="container-4">
+          <input type="text" id="search" formControlName="domain" placeholder="Search..." />
+          <button class="icon"><i class="fa fa-search" (click)="postDomain()"></i></button>
+        </div>
+      </div>
+    </form>
+
+    <section class="our-webcoderskull padding-lg mt-2">
+      <div class="select">
+        <h3>Hire the developer that best suits your business needs</h3>
+      </div>
+
+      <div class="container">
+        <div class="row heading heading-icon"></div>
+        <div class="row">
+          <div class="row">
+            <div class="cnt-block equal-hight col" style="width: 18rem;" style="height: 410px; margin: 4px;"
+              *ngFor="let dev of devProfile">
+              <div class="icon">
+                <a [routerLink]="['1']" [state]="dev">
+                  <span class="material-icons menu">
+                    menu
+                  </span>
+                </a>
+              </div>
+
+              <img src="{{ dev.devImg }}" class="img-responsive" alt="" />
+
+              <h4>{{ dev.name }}</h4>
+              <h6>{{ dev.title }}</h6>
+              <h6 class="card-text">
+                With {{ dev.yearsOfExperience }} year(s) of experience.
+              </h6>
+              <div id="social">
+                <a class="facebookBtn smGlobalBtn" href="#"></a>
+                <a class="twitterBtn smGlobalBtn" href="#"></a>
+                <!-- <a class="githubBtn smGlobalBtn" href="#"></a> -->
+                <a class="linkedinBtn smGlobalBtn" href="#"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

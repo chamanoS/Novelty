@@ -1,0 +1,53 @@
+<mat-grid-list cols="2" rowHeight="200px">
+  <mat-grid-tile class="text-inside-grid">
+    <div class="mb-5 mt-11 col-header">
+      <h6 class="display-4 mb-5">Business Legality</h6>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<div class="row">
+  <div class="col-sm pl-5">
+    <div class="img">
+      <img class="image animated fadeInLeft delay-0.5s" src="assets/img/legal_banner.png"/>
+    </div>
+  </div>
+
+  <div class="col-sm pl-5">
+    <div class="col-sm-12 rounded-left border border-right-1 border-bottom-0 border-top-0 border-left-0">
+      <span class="badge badge-primary mb-2">
+        Legal Business Requirements
+      </span>
+      <h5 class="lead mb-2">
+        Welcome to the Business Legality, here you're provided with the most
+        important legal requirements to get you're business fully legalised
+      </h5>
+      <br />
+    </div>
+
+    <mat-vertical-stepper [linear]="isLinear" #stepper>
+      <mat-step *ngFor="let content of legalContent; index as i" [stepControl]="firstFormGroup">
+        <ng-template matStepLabel>{{ content.title }}</ng-template>
+        <p>{{ content.content }} <a href="{{ content.link }}" target="_blank"> Click Here</a>
+        </p>
+
+        <div *ngIf="i == 0">
+          <button mat-button matStepperNext routerLink="/client/journey">
+            Back To Evaluation
+          </button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+        <div *ngIf="i > 0 && i < len - 1">
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+        <div *ngIf="i == len - 1">
+          <button mat-button matStepperPrevious>Back</button>
+          <!-- <button mat-button [routerLink]="['/client/finance']">
+            Head To Finance
+          </button> -->
+        </div>
+      </mat-step>
+    </mat-vertical-stepper>
+  </div>
+</div>

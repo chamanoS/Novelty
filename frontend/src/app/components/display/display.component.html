@@ -1,0 +1,68 @@
+
+<div *ngIf="!saved">
+<div class="row justify-content-center animated fadeInDown " style="margin-top: 10px;">
+
+   <h3 style="margin-top: 10px;" class=""> Hello {{ userName|titlecase}} </h3>
+</div>
+
+<div class="row justify-content-center animated fadeInRight">
+
+    <img src="../../../assets/img/8c7012.png" width="300" />
+</div>
+
+
+<div class="row justify-content-center animated fadeInLeft ">
+    <h3 class="display-3 text-center text-md-left" >
+        Let's turn your <span class="text-primary">IDEA</span> into a business.<br>
+    </h3>
+</div>
+
+<div class="row justify-content-center animated fadeInLeft ">
+
+    <form class="example-form" [formGroup]="form">
+        <mat-form-field class="example-full-width">
+            <mat-label>What's the name of your business idea? </mat-label>
+            <input matInput required formControlName="busin_idea">
+          </mat-form-field>
+
+  <mat-form-field class="example-full-width" >
+    <mat-label>Tell us more about your idea? </mat-label>
+    <textarea matInput formControlName="descript" required placeholder="Ex. It makes me feel..."></textarea>
+  </mat-form-field>
+</form>
+</div>
+
+<div class="row justify-content-center animated fadeInUp delay-0.5s">
+    <button mat-raised-button color="primary" (click)="continue()" [disabled]="form.invalid">Save</button>
+</div>
+</div>
+
+
+
+
+
+
+
+<div *ngIf="saved">
+
+
+
+
+<div class="row justify-content-center" style="margin-top: 10px;">
+
+    <h3 style="margin-top: 10px;" class=""> Perfect, your idea is saved </h3>
+</div>
+
+
+<div class="row justify-content-center">
+
+    <img src="../../../assets/img/puzzle-1.png" width="800" />
+</div>
+
+
+
+<div class="row justify-content-center">
+    <h3 class="text-center text-md-left" >
+        Click <span>Next</span> to proceed .<br>
+    </h3>
+</div></div>

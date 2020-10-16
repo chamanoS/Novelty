@@ -1,0 +1,106 @@
+<div style="height: 100vh;">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row class="container">
+      <button
+        mat-icon-button
+        (click)="sidenav.toggle()"
+        fxShow="true"
+        fxHide.gt-sm
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <img
+        src="../../../assets/img/2L-Logo-svg.svg"
+        width="40"
+        fxHide
+        fxShow.gt-sm
+      />
+      <span style="margin-left: 10px;">Novelty</span>
+      <span class="menu-spacer"></span>
+
+      <div fxShow="true" fxHide.lt-md>
+        <mat-menu #appMenu="matMenu">
+          <button mat-menu-item routerLink="/client/login" *ngIf="!loggedIn">
+            Login
+          </button>
+          <button
+            mat-menu-item
+            routerLink="/client/login"
+            *ngIf="loggedIn"
+            (click)="logout()"
+          >
+            Logout
+          </button>
+          <button mat-menu-item routerLink="/client/register" *ngIf="!loggedIn">
+            Register
+          </button>
+        </mat-menu>
+
+        <button mat-flat-button routerLink="/client">Home</button>
+        <button mat-flat-button>About</button>
+        <button mat-flat-button [matMenuTriggerFor]="appMenu" *ngIf="!loggedIn">
+          Account
+        </button>
+        <button mat-flat-button [matMenuTriggerFor]="appMenu" *ngIf="loggedIn">
+          Account
+          <!-- <span class="badge badge-warning mr-1 mt-3 mb-3">Logged in as</span>
+          {{ user.first_name }} -->
+        </button> 
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-sidenav-container fxFlexFill>
+    <mat-sidenav #sidenav mode="push">
+      <div class="container" style="width: 220px;"></div>
+      <mat-nav-list>
+        <div class="row justify-content-center">
+          <img
+            src="../../../assets/img/2L-Logo-svg (b).svg"
+            alt=""
+            width="80"
+          />
+          <br />
+        </div>
+
+        <div class="row justify-content-center" *ngIf="loggedIn">
+          <h4>{{ user.first_name }} {{ user.last_name }}</h4>
+        </div>
+
+        <hr />
+
+        <a
+          routerLink="/client"
+          (click)="sidenav.toggle()"
+          mat-list-item
+          style="padding-left: 35%;"
+          >Home</a
+        >
+        <a
+          routerLink="/client/login"
+          (click)="sidenav.toggle()"
+          mat-list-item
+          style="padding-left: 35%;"
+          >Login</a
+        >
+        <a
+          routerLink="/client/register"
+          (click)="sidenav.toggle()"
+          mat-list-item
+          style="padding-left: 35%;"
+          >Register</a
+        >
+        <a mat-list-item style="padding-left: 35%;">About</a>
+
+        <!-- <div class="row justify-content-center">
+          <button mat-flat-button>About</button>
+           <a (click)="sidenav.toggle()" mat-list-item>Close</a> 
+            
+        </div> -->
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill
+      ><router-outlet></router-outlet
+    ></mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

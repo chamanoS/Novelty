@@ -1,0 +1,72 @@
+@import '~animate.css/animate.min';
+
+.card{
+    width: 750px;
+    height: 600px;
+    margin: auto;
+    margin-top: 100px !important;
+    border-radius: 2%;
+
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+.div{
+  padding-left: 85px;
+  padding-top: 30px;
+
+}
+
+.btn{
+  margin-top: 15px;
+
+}
+.chams:hover{
+  background-color: #042a43;
+  color:white;
+  cursor: not-allowed !important;
+}
+
+
+.image{
+  height: 300px;
+  width: 170;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+.material-icons {
+  font-size: 18px !important;
+  padding-right: 15px;
+ 
+}
+
+.header{
+  font-weight: bolder;
+  font-size: xx-large;
+}
+.line{
+   width: 30px;
+  padding-left: 50px;
+}
+.buttons{
+  display: flex;
+  justify-content: centre;
+  align-items: center;
+}
+#btn{
+  font-size: smaller;
+  text-align: center;
+  // padding-left: 12px;
+  margin-left: 30px;
+  margin-top: 15px;
+}
+.img{
+  margin-top: 35px;
+}
+

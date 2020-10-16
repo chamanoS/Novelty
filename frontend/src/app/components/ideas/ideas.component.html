@@ -1,0 +1,59 @@
+<div class=container-outer>
+    <div class="container-inner">
+        <mat-grid-list cols="1" rowHeight="230px">
+            <mat-grid-tile class="text-inside-grid">
+                <div class="mb-5 mt-11 col-header">
+                    <h6 class="display-4 mb-5">B U S I N E S S <span class="text-primary"> I D E A S</span></h6>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+        
+        <div class="row">
+            <div class="col-sm-3 rounded-left border border-right-1 border-bottom-0 border-top-0 border-left-0">
+                <span class="badge badge-primary mb-2">Ideas:</span>
+                <h5 class="lead mb-2">All your business ideas</h5>
+                <div class="position-absolute button-add">
+                    <button type="button" class="btn btn-primary" class="float" mat-fab data-toggle="modal" (click)="openDialog()">
+                        <i class="material-icons">add</i>
+                    </button>
+                </div>
+                <div *ngIf="found">
+                    <div class="card mt-2 pl-2 pr-4" *ngFor="let idea of ideas.data" (click)="change()">
+                        <h3 class="title">{{idea.busin_idea}}</h3>
+                        <div class="bar">
+                            <div class="emptybar">
+                            </div>
+                            <p class="description mt-1">{{idea.descript}}</p>
+                            <div class="filledbar"></div>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="!found">
+                    <p>No idea was found</p>
+                </div>
+            </div>
+            <div class="col-sm pl-5">
+                <div *ngIf="evaluation">
+                    <app-question></app-question>
+                </div>
+                <div *ngIf="!evaluation">
+                    <div class="mb-5">
+                        <h2 class="lead mb-2 h3"><span class="text-primary">I D E A S</span></h2>
+                        <p>There's no doubt that successful businesses start with brilliant ideas. After all, in today's fiercely competitive
+                            environment, innovation is the ammunition entrepreneurs need to stand out in the crowd. 
+                            <br><br>
+                            The first step to any sucessful business is to have an idea, that is of what the business is about. In here you'll able to add your business ideas cause a business idea written down may never be forgotten, each and every
+                            bsuiness idea you'll have to evalaute it, there are questions which your answers to them will help you to know which of the business ideas is most likely to succeed.
+                            <br><br>
+                        </p>
+                    </div>
+                </div>  
+            </div>
+            <div class="col-sm-5">
+                <div class="img">
+                    <img class="image animated fadeInRight delay-0.5s" src="assets/img/ideas-header.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

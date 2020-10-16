@@ -1,0 +1,8 @@
+[
+        {"id" : 1 , "q_name" : "What problem is your idea solving?"},
+        {"id" : 2 , "q_name" : "What value does your product or service add to someone’s life?"},
+        {"id" : 3 , "q_name" : "Who else is doing this?"},
+        {"id" : 4 , "q_name" : "How is your product or service different?"},
+        {"id" : 5 , "q_name" : "Is this a long or short term goal?"}
+
+]

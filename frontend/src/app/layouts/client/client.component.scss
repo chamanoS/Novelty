@@ -1,0 +1,48 @@
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #eee;
+}
+
+.menu-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-flat-button {
+  color: white;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+button {
+  border: none !important;
+  outline: none !important;
+}
+
+// .mat-toolbar.mat-primary {
+//     background-color: #007bff;
+// }
+
+// .mat-drawer {
+//   background-color:#397665;
+// }
+
+.mat-list-base .mat-list-item .mat-list-item-content {
+  padding-left: 40% !important;
+}
+
+.badge .badge-warning {
+  margin-top: 10px;
+}

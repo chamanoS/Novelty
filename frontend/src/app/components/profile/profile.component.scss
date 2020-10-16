@@ -1,0 +1,345 @@
+@import "~animate.css/animate.min";
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+$width: 300px;
+$height: 3rem;
+$color50: #eceff1;
+$color100: #cfd8dc;
+$color300: #90a4ae;
+$color700: #455a64;
+$color800: #37474f;
+$color900: #263238;
+.searchbar {
+  margin-bottom: auto;
+  margin-top: auto;
+  height: 60px;
+  background-color: #3f51b5;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.search_input {
+  color: white;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  caret-color: transparent;
+  line-height: 40px;
+  transition: width 0.4s linear;
+}
+
+.searchbar:hover > .search_input {
+  padding: 0 10px;
+  width: 450px;
+  caret-color: red;
+  transition: width 0.4s linear;
+}
+
+.searchbar:hover > .search_icon {
+  background: white;
+  color: #e74c3c;
+}
+
+.search_icon {
+  height: 40px;
+  width: 40px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+}
+
+//search bar
+.box {
+  margin: auto;
+  width: $width;
+  height: $height;
+}
+.icon:hover {
+  cursor: pointer;
+}
+.container-4 {
+  position: relative;
+  width: $width;
+}
+.container-4 input#search {
+  box-sizing: border-box;
+  width: $width;
+  height: $height;
+  font-size: 1rem;
+  line-height: 1.5em;
+  border: 1px solid $color900;
+  background: $color50;
+  color: $color900;
+  padding: 0 3rem 0 1rem;
+  float: left;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+}
+.container-4 button.icon {
+  position: absolute;
+  height: $height;
+  width: $height;
+  border: none;
+  background: $color900;
+  color: $color50;
+  font-size: 1rem;
+  line-height: 1.5em;
+  border-radius: 0 1rem 1rem 0;
+  margin-left: -$height;
+}
+.container-4 input#search:hover,
+.container-4 input#search:focus,
+.container-4 input#search:active {
+  outline: none;
+}
+.h5 {
+  text-align: center;
+  margin-bottom: 0;
+}
+// devs
+.row.heading h2 {
+  color: #fff;
+  font-size: 52.52px;
+  line-height: 95px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 0 40px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.heading.heading-icon {
+  display: block;
+}
+.padding-lg {
+  display: block;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.practice-area.padding-lg {
+  padding-bottom: 55px;
+  padding-top: 55px;
+}
+.practice-area .inner {
+  border: 1px solid #999999;
+  text-align: center;
+  margin-bottom: 28px;
+  padding: 40px 25px;
+}
+// .our-webcoderskull .cnt-block:hover {
+//   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+//   border: 0;
+// }
+.practice-area .inner h3 {
+  color: #3c3c3c;
+  font-size: 24px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  padding: 10px 0;
+}
+.practice-area .inner p {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}
+.practice-area .inner img {
+  display: inline-block;
+}
+.our-webcoderskull {
+  background-color: #fafafa;
+}
+.our-webcoderskull .cnt-block {
+  float: left;
+  width: 100%;
+  background: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  border: 2px solid #d5d5d5;
+  margin: 0 0 28px;
+}
+.our-webcoderskull .cnt-block figure {
+  width: 148px;
+  height: 148px;
+  border-radius: 100%;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.our-webcoderskull .cnt-block img {
+  width: 148px;
+  height: 148px;
+  border-radius: 100%;
+}
+.our-webcoderskull .cnt-block h3 {
+  color: #2a2a2a;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 6px 0;
+  text-transform: uppercase;
+}
+.our-webcoderskull .cnt-block h3 a {
+  text-decoration: none;
+  color: #2a2a2a;
+}
+.our-webcoderskull  h3 a:hover {
+  color: #337ab7;
+}
+.our-webcoderskull .cnt-block p {
+  color: #2a2a2a;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.our-webcoderskull .cnt-block .follow-us {
+  margin: 20px 0 0;
+}
+.our-webcoderskull .cnt-block .follow-us li {
+  display: inline-block;
+  width: auto;
+  margin: 0 5px;
+}
+.our-webcoderskull .cnt-block .follow-us li .fa {
+  font-size: 24px;
+  color: #767676;
+}
+.our-webcoderskull .follow-us li .fa:hover {
+  color: #025a8e;
+}
+
+//for menu icon
+.icon {
+  margin: 0 0px 0px 120px;
+  padding: 0;
+}
+
+.menu {
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #3f51b5;
+  color: #3f51b5;
+  background-color: white;
+  font-size: 24px;
+  margin: 0px;
+  padding: 8px;
+}
+//star icon
+.star {
+  margin-bottom: 5px;
+  // color: #3f51b5;
+}
+
+.wraper {
+  margin: 100px 150px;
+}
+.select {
+  margin: 10px 50px;
+  text-align: center;
+}
+
+.devInfo {
+  margin: 50px 0px;
+}
+.devInfo h5 {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+//social ions
+
+#social {
+  margin: 20px 10px;
+  text-align: center;
+}
+
+.smGlobalBtn {
+  /* global button class */
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  box-shadow: 0 2px 2px #999;
+  padding: 5px;
+  margin: 3px;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  font-size: 25px;
+  font-weight: normal;
+  line-height: 1em;
+  border-radius: 25px;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+}
+
+/* facebook button class*/
+.facebookBtn {
+  background: #4060a5;
+}
+
+.facebookBtn:before {
+  /* use :before to add the relevant icons */
+  font-family: "FontAwesome";
+  content: "\f09a"; /* add facebook icon */
+}
+
+.facebookBtn:hover {
+  color: #4060a5;
+  background: #fff;
+}
+
+/* twitter button class*/
+.twitterBtn {
+  background: #00abe3;
+}
+
+.twitterBtn:before {
+  font-family: "FontAwesome";
+  content: "\f099"; /* add twitter icon */
+}
+
+.twitterBtn:hover {
+  color: #00abe3;
+  background: #fff;
+}
+
+/* google plus button class*/
+.githubBtn {
+  background: #e64522;
+}
+
+.githubBtn:before {
+  font-family: "FontAwesome";
+  content: "\f0d5"; /* add googleplus icon */
+}
+
+.githubBtn:hover {
+  color: #e64522;
+  background: #fff;
+}
+
+/* linkedin button class*/
+.linkedinBtn {
+  background: #0094bc;
+}
+
+.linkedinBtn:before {
+  font-family: "FontAwesome";
+  content: "\f0e1"; /* add linkedin icon */
+}
+
+.linkedinBtn:hover {
+  color: #0094bc;
+  background: #fff;
+}
+
+.img-responsive{
+  object-fit: cover;
+}

@@ -1,0 +1,63 @@
+
+
+
+
+        
+   
+
+<div id="myDIV" class="header">
+  <br>
+  <div class="inputs" >
+    <h2 style="margin:5px">Enter Your Business Idea</h2>
+    <input type="text" id="myInput" [(ngModel)]="busin_Idea" [ngModelOptions]="{standalone: true}" placeholder="Title...">
+  </div>
+  <br><br>
+  <div class="inputs">
+    <h2 style="margin:5px">Enter Your Business Description</h2>
+    <input type="text" id="myInput" [(ngModel)]="descript" [ngModelOptions]="{standalone: true}" placeholder="Desc...">
+  </div>
+  
+  <div class="btns">
+    <button class="addBtn" (click)="inserIdea()">Add</button>
+
+  </div>
+  
+</div>
+
+<div *ngIf="found" class="list-items">
+  <ul id="myUL">
+    <li (click)="popup(idea.id)" *ngFor = "let idea of ideas.data; let i = index" (click)="viewIdea(idea.id)"> 
+        {{i + 1}} - {{idea.busin_idea}} - {{idea.descript}}
+
+    </li>
+    
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

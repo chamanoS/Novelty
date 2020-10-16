@@ -1,0 +1,17 @@
+FROM mysql:5.7
+
+WORKDIR /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+ENV PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+ENV GOSU_VERSION = 1.7
+
+ENV MYSQL_MAJOR = 5.7
+
+ENV MYSQL_VERSION = 5.7.29-1debian9
+
+ENV MYSQL_ROOT_PASSWORD=novelty1234
+
+COPY noveltydb.sql /docker-entrypoint-initdb.d/
+
+EXPOSE 3306

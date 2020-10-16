@@ -1,0 +1,55 @@
+<div class="container-inner">
+  <mat-grid-list cols="2" rowHeight="900px">
+    <mat-grid-tile>
+      <div class="img">
+        <img class="image animated fadeInRight delay-0.5s" src="{{ profile.devImg }}" />
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile class="text-inside-grid">
+      <div class="mb-5 mt-11 col-header">
+        <h1 class="display-4 mb-2">Work Experience</h1>
+        <p class="lead">{{ profile.company }}</p>
+        <p class="uk-text-meta uk-margin-remove-top">
+          <time datetime="June 2018" class="time">{{ profile.workStart }}</time>
+          - {{ profile.workEnd }}
+        </p>
+        <p class="lead">{{ profile.description }}</p>
+
+        <hr />
+
+        <h1 class="display-4 mb-2">Education</h1>
+        <p class="lead">{{ profile.school }}</p>
+        <p class="uk-text-meta uk-margin-remove-top">
+          <time datetime="June 2018" class="time">{{
+            profile.educationStart
+          }}</time>
+          - {{ profile.educationEnd }}
+        </p>
+        <p>Qualification : {{ profile.degree }}</p>
+        <hr />
+
+        <h1 class="display-4 mb-2">Skills</h1>
+        <ul class="list">
+          <li>
+            Frontend:
+            <h6>{{ profile.frontendSkills }}</h6>
+          </li>
+          <li>
+            Backtend:
+            <h6>{{ profile.backendSkills }}</h6>
+          </li>
+          <li>
+            Database:
+            <h6>{{ profile.databaseSkills }}</h6>
+          </li>
+          <!-- <li>
+            DevOpps:
+            <h6>Docker</h6>
+          </li> -->
+        </ul>
+        <hr />
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

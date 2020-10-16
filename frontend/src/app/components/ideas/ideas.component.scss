@@ -1,0 +1,439 @@
+@import "~animate.css/animate.min";
+
+.nav-link {
+  font-weight: bolder;
+}
+
+.nav-link:hover {
+  background-color: #007bff;
+}
+
+.nav-item {
+  margin-left: 40px;
+}
+
+.mat-stepper-horizontal {
+  margin-top: 8px;
+}
+
+.header {
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+.col-header {
+  margin-top: 180px;
+}
+
+.card-ideas {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card-ideas:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-container {
+  margin-top: 180px;
+}
+
+.mat-form-field {
+  margin-top: 16px;
+}
+
+.container-inner {
+  position: relative;
+  width: 80%;
+  height: 50%;
+  margin: auto;
+}
+
+.container-outer {
+  background-color: white;
+  width: 100%;
+  height: 120%;
+  overflow: scroll;
+}
+
+.img {
+  margin-top: 0.625rem;
+}
+
+.idea {
+    
+  padding:15px 40px;
+  background-color: #fafafa;
+  border-left: 10px solid  #007bff;
+  // border-color: #007bff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  
+}
+
+.idea:hover {
+ 
+  background-color: #007bff;
+  color: white;
+}
+
+.image {
+  height: 28rem;
+  width: 30rem;
+  margin-left: 1.25rem;
+  margin-top: 0.625rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: centre;
+  align-items: center;
+}
+
+#btn {
+  font-size: smaller;
+  text-align: center;
+  margin-left: 30px;
+  margin-top: 15px;
+  padding: 14px 40px;
+}
+
+.btn-add {
+  float: right;
+}
+
+.btn-info {
+  float: right;
+}
+
+.info {
+  margin-bottom: 30px;
+}
+
+.paragraph {
+  margin-top: 20px;
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+.divider {
+  margin-top: 76px;
+}
+
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.example-headers-align .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+.scrolling-wrapper {
+  overflow: scroll;
+  height: 400px;
+  white-space: nowrap;
+}
+
+.scrolling-container {
+  overflow: scroll;
+  white-space: nowrap;
+}
+
+.w3-pale-blue,
+.w3-hover-pale-blue:hover {
+  color: #000 !important;
+}
+
+.w3-leftbar {
+  border-left: 6px solid !important;
+}
+.w3-container,
+.w3-panel {
+  padding: 0.01em 16px;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+.img-dashboard {
+  vertical-align: middle;
+  border-style: none;
+  width: 50% !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.searchbar {
+  height: 60px;
+  background-color: #007bff;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.search_input {
+  color: white;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  caret-color: transparent;
+  line-height: 40px;
+  transition: width 0.4s linear;
+}
+
+.search_input::placeholder {
+  color: white;
+}
+
+.searchbar:hover > .search_input {
+  padding: 0 10px;
+  width: 450px;
+  caret-color: red;
+  transition: width 0.4s linear;
+}
+
+.searchbar:hover > .search_icon {
+  background: white;
+  color: #e74c3c;
+}
+
+.search_icon {
+  height: 40px;
+  width: 40px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.tab-icon {
+  margin-right: 8px;
+}
+
+.stretched-tabs {
+  max-width: 800px;
+}
+
+.button-add {
+  margin-left: 15.7rem;
+  margin-top: 4rem;
+}
+
+mat-card {
+  transition: none !important;
+  box-shadow: none !important;
+}
+
+.gedf-main {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.gedf-card {
+  margin-bottom: 2.77rem;
+}
+
+.dropdown-toggle::after {
+  content: none;
+  display: none;
+}
+
+// --------- Cards -----------
+.card {
+  height: 7rem;
+  width: 15rem;
+  background-color: #007bff;
+  border-radius: 10px;
+/*   margin-left: -50px; */
+  transition: 0.4s ease-out;
+}
+
+.card:hover {
+  padding-top: 10px;
+  transform: translateY(-07px);
+  transition: 0.4s ease-out;
+  padding-bottom: 10px;
+}
+
+.card:hover ~ .card {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  transition: 0.4s ease-out;
+}
+
+.title {
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.bar {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  height: 0.3rem;
+  width: 10rem;
+}
+
+.description {
+  top: 50px;
+  left: 20px;
+  font-size: xx-small;
+}
+
+.emptybar {
+  background-color: #2e3033;
+  width: 100%;
+  height: 100%;
+}
+
+.filledbar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: rgb(0,154,217);
+  background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
+  transition: 0.6s ease-out;
+}
+
+.card:hover .filledbar {
+  width: 120px;
+  transition: 0.4s ease-out;
+}
+
+.stroke {
+  stroke: white;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  transition: 0.6s ease-out;
+}
+
+svg {
+  fill: #17141d;
+  stroke-width: 2px;
+}
+
+.card:hover .stroke {
+  stroke-dashoffset: 100;
+  transition: 0.6s ease-out;
+}
+
+@media screen and (max-width:1199px) {
+  .card {
+    // height: 83%;
+    width: 83%;
+  }
+  
+  .button-add {
+    margin-left: 82.2%;
+    margin-top: 100%;;
+  }
+
+  .filledbar {
+    position: 100%;
+  }
+
+  .emptybar {
+    width: 83%;
+  }
+
+  .description {
+    width: 70%;
+    font-size: 40%;
+  }
+
+  .image {
+    width: 120%;
+  }
+}
+
+@media screen and (max-width:1090px) {
+  .bar {
+    position: 10%;
+  }
+  .card {
+    // height: 83%;
+    width: 73%;
+  }
+  
+  .button-add {
+    margin-left: 82.2%;
+    margin-top: 100%;;
+  }
+
+  .filledbar {
+    position: 10%;
+  }
+
+  .emptybar {
+    width: 57%;
+  }
+
+  .description {
+    width: 70%;
+    font-size: 40%;
+  }
+
+  .image {
+    width: 120%;
+  }
+}
+
+@media screen and (max-width:650px) {
+  .bar {
+    position: 100%;
+  }
+  .card {
+    // height: 83%;
+    width: 100%;
+  }
+  
+  .button-add {
+    margin-left: 82.2%;
+    margin-top: 100%;;
+  }
+
+  .filledbar {
+    position: 10%;
+  }
+
+  .emptybar {
+    width: 57%;
+  }
+
+  .description {
+    width: 70%;
+    font-size: 40%;
+  }
+
+  .image {
+    width: 120%;
+  }
+
+  .col-sm-3 {
+    width: 100%;
+  }
+}

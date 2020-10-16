@@ -1,0 +1,82 @@
+
+<mat-card class="card">
+    <mat-grid-list cols="2" rowHeight="550px" *ngIf="!message">
+      <mat-grid-tile class="text-inside-grid">
+        <div class="div" >
+          <h3 class="header">Create an account</h3>
+          <!-- Form for registration -->
+          <form [formGroup]="form" #loginForm="ngForm" (ngSubmit)="submit(loginForm.value)">
+         <!-- input for the name of user -->
+            <mat-form-field class="dummy-input-field" appearance="legacy">
+              <i  matPrefix class="material-icons">
+              account_circle
+            </i>
+              <input matInput placeholder="Name"  required formControlName="first_name" maxlength="15"/>
+            </mat-form-field>
+      
+            <!-- input for the surname of user -->
+            <mat-form-field appearance="legacy">
+              <i  matPrefix class="material-icons">
+                perm_contact_calendar
+                </i>
+              <input matInput placeholder="Surname"  required  formControlName="last_name" maxlength="25"/>
+            </mat-form-field>
+
+<!-- input for the email of user  -->
+            <mat-form-field appearance="legacy">
+              <i matPrefix  class="material-icons">
+                email
+                </i>
+              <input type="email" matInput placeholder="Email Address"  required formControlName="email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" /> 
+              <mat-error *ngIf="form.controls['email'].invalid"> Not a valid email</mat-error>
+            </mat-form-field>
+         
+            <!-- input for confirming password -->
+              <mat-form-field>
+                <i matPrefix  class="material-icons">
+                  lock
+                  </i>
+                <input type="password" matInput placeholder="Enter your password" formControlName="user_password" required>
+                <!-- checks if the password is inserted -->
+                <mat-error *ngIf="form.controls['user_password'].invalid">Password is required</mat-error>
+              </mat-form-field>
+           
+
+           <mat-form-field *ngIf="form.controls['user_password'].valid">
+            <i matPrefix  class="material-icons">
+              lock
+              </i>
+            <input type="password" matInput placeholder="Confirm your password" formControlName="confirm_password" >
+            <!-- checks if passwords and confirm password matches -->
+        <mat-error *ngIf="form.controls['confirm_password'].pristine || form.controls['confirm_password'].errors?.MatchPassword">Password does not match</mat-error>
+          </mat-form-field>
+          </form>
+
+          <!-- buttons -->
+         <div class="buttons">
+           <!-- register button -->
+          <button mat-flat-button color="primary" class="btn" [ngClass]="{'chams':loginForm.invalid}" type="submit" (click)="submit()" [disabled]="loginForm.invalid" >Register</button>
+
+       <!-- login button-->
+            <button mat-flat-button color="primary" class="btn" id="btn" routerLink="/login" class="login" >Login</button>
+         </div>
+        </div>
+      </mat-grid-tile>
+      
+      <!-- image -->
+      <mat-grid-tile>
+        <div class="img">
+          <img class="image" src="assets/img/logoB.png">
+       
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <div class="btn-rest" *ngIf="message">
+      <h3 >{{msg}}</h3>
+      <button mat-flat-button color="primary" [routerLink]="['/login']" routerLinkActive="router-link-active" >Login</button>
+    </div>
+          
+  </mat-card>
+
+  

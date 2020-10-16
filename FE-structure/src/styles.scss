@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #eceff1;}
+.mat-grid-tile .mat-figure {
+    justify-content: flex-start !important ;
+ }
+// regular style toast 
+@import '~ngx-toastr/toastr';
+@import '~bootstrap/dist/css/bootstrap.min.css';
